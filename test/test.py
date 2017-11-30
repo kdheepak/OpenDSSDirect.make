@@ -38,6 +38,7 @@ print('library content: {}'.format(os.listdir('../_lib')))
 if klusolve is not None:
 	DLL('../_lib/{}-{}/{}'.format(CPU, OS, klusolve))
 
+print("../_lib/{}-{}/{}".format(CPU, OS, opendssdirect))
 dss = DLL('../_lib/{}-{}/{}'.format(CPU, OS, opendssdirect))
 
 print('{} -> Start({})'.format(dss, dss.DSSI(ctypes.c_int32(3), ctypes.c_int32(0)) == 1))
